@@ -24,7 +24,7 @@ $result = $conn->query($sql);
             echo "<h5 class='card-title'>Fecha: " . $row['fecha_cita'] . "</h5>";
             echo "<p class='card-text'>Motivo: " . $row['motivo_cita'] . "</p>";
             // Formulario para modificar citas
-            echo "<form action='modificar_cita.php' method='post' class='mb-2'>";
+            echo "<form action='citaciones.php' method='post' class='mb-2'>";
             echo "<input type='hidden' name='idCita' value='" . $row['idCita'] . "'>";
             echo "<div class='mb-3'>";
             echo "<label for='fecha_cita' class='form-label'>Fecha de la Cita</label>";
@@ -50,7 +50,7 @@ $result = $conn->query($sql);
     ?>
 
     <h2 class="text-center mb-4">Solicitar Nueva Cita</h2>
-    <form action="solicitar_cita.php" method="post" class="needs-validation" novalidate>
+    <form action="citaciones.php" method="post" class="needs-validation" novalidate>
         <div class="mb-3">
             <label for="fecha_cita" class="form-label">Fecha de la Cita</label>
             <input type="date" class="form-control" id="fecha_cita" name="fecha_cita" required>
