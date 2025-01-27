@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $sexo = $_POST['sexo'];
     $usuario = $_POST['usuario'];
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-    $rol = $_POST['rol']; // Nuevo campo de rol
+    $rol = $_POST['$user']; // Nuevo campo de rol
 
     // Iniciar una transacción
     $conn->begin_transaction();
